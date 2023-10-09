@@ -1,0 +1,18 @@
+from math import sqrt
+print("podaj wymiary trójkąta")
+
+a = float(input())
+b = float(input())
+c = float(input())
+
+if a + b > c and b + c > a and a + c > b:
+    print("jest to trujkąt")
+    p = (a+b+c)/2
+    p = sqrt(p*(p-a)*(p-b)*(p-c))
+print(p)
+if a**2 + b**2 == c**2 and a**2 + c**2 == b**2 and c**2 + b**2 == a**2:
+    print("trujkąt jest prostokątny")
+if a == b or a == c or b == c:
+    print("trójkąt jest równoramienny")
+else:
+    print("nie jest to trójkąt")
